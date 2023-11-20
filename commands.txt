@@ -1,0 +1,10 @@
+gcloud functions describe get_ephemeris --gen2 --region us-central1 --format="value(serviceConfig.uri)"
+
+
+gcloud functions deploy get_ephemeris \
+--gen2 \
+--runtime=python312 \
+--region=us-central1 \
+--source=. \
+--entry-point=getEphemeris \
+--trigger-http 
